@@ -8,12 +8,24 @@
 
 #barralateral {
   background-color: #0F0;
+  float: left;
+  height: 1022px;
 }
 
 #contenidoprincipal {
   background-color: #606;
+  margin-left: 200px;
+  padding-left: 15px;
+  padding-top: 15px;
 }
 
 #pieprincipal {
   background-color: #FF0;
+  clear: both;
+  margin-top: 50px; 
+}
+
+li {
+  background-color: #FF0;
+  display: inline;
 }
