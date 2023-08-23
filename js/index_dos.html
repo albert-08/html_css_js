@@ -5,33 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script>
-    let imagen;
+    const imagenes = new Array(3);
 
     function tipoflor() {
       alert("Pensamientos");
     }
 
-    function crecer() {
+    /* function crecer() {
       imagen.width = 225;
       imagen.height = 225;
-    }
+    } */
 
-    function menguar() {
+    /* function menguar() {
       imagen.width=200;
       imagen.height=200;
+    } */
+
+    function manejaflor() {      
+      for (let i = 0; i < 4; i++) {
+        imagenes[i] = document.getElementsByTagName("img")[i];
+      }
+
+      imagenes[0].addEventListener("mouseover", function() { imagenes[0].width=225;imagenes[0].height=225; }, false);
+      imagenes[0].addEventListener("mouseout", function() { imagenes[0].width=200;imagenes[0].height=200; }, false);
+      imagenes[0].addEventListener("click", tipoflor, false);
+
+      imagenes[1].addEventListener("mouseover", function() { imagenes[1].width=225;imagenes[1].height=225; }, false);
+      imagenes[1].addEventListener("mouseout", function() { imagenes[1].width=200;imagenes[1].height=200; }, false);
+      imagenes[1].addEventListener("click", tipoflor, false);
+
+      imagenes[2].addEventListener("mouseover", function() { imagenes[2].width=225;imagenes[2].height=225; }, false);
+      imagenes[2].addEventListener("mouseout", function() { imagenes[2].width=200;imagenes[2].height=200; }, false);
+      imagenes[2].addEventListener("click", tipoflor, false);
+
+      imagenes[3].addEventListener("mouseover", function() { imagenes[3].width=225;imagenes[3].height=225; }, false);
+      imagenes[3].addEventListener("mouseout", function() { imagenes[3].width=200;imagenes[3].height=200; }, false);
+      imagenes[3].addEventListener("click", tipoflor, false);
     }
 
-    function manejaflor() {
-      imagen = document.getElementsByTagName("img")[0];
-      imagen.addEventListener("mouseover", crecer, false);
-      imagen.addEventListener("mouseout", menguar, false);
-      imagen.addEventListener("click", tipoflor, false);
-    }
-
-    window.onload=manejaflor;
+    // window.onload=manejaflor;
+    window.addEventListener("load", manejaflor, false);
   </script>
 </head>
 <body>
-  <p><img src="../ejercicio1/imagenes/1.jpg"></p>  
+  <p>
+    <img src="../ejercicio1/imagenes/1.jpg">&nbsp;&nbsp;
+    <img src="../ejercicio1/imagenes/2.jpg">&nbsp;&nbsp;
+    <img src="../ejercicio1/imagenes/3.jpg">&nbsp;&nbsp;
+    <img src="../ejercicio1/imagenes/4.jpg">&nbsp;&nbsp;
+  </p>  
 </body>
 </html>
